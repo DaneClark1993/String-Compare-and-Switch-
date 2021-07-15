@@ -27,14 +27,15 @@ public class Main {
 
 
         Scanner input = new Scanner(System.in);
-        System.out.print("Enter either 1, 2 or 3: ");
-        int number = input.nextInt();
+        System.out.print("Enter either A, B or C: ");
+        String number = input.nextLine();
+        char letter = number.charAt(0);
 
-        switch (number) {
-            case 1 -> JOptionPane.showMessageDialog(null, "You entered 1");
-            case 2 -> JOptionPane.showMessageDialog(null, "You entered 2");
-            case 3 -> JOptionPane.showMessageDialog(null, "You entered 3");
-            default -> JOptionPane.showMessageDialog(null, "You entered neither 1, 2 or 3");
+        switch (letter) {
+            case 'a', 'A' -> JOptionPane.showMessageDialog(null, "You entered A");
+            case 'b', 'B' -> JOptionPane.showMessageDialog(null, "You entered B");
+            case 'c', 'C' -> JOptionPane.showMessageDialog(null, "You entered C");
+            default -> JOptionPane.showMessageDialog(null, "You entered neither A, B or C");
         }
         System.exit(0);
 
