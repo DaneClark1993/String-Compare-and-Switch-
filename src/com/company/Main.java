@@ -1,5 +1,6 @@
 package com.company;
 import javax.swing.*;
+import java.util.Scanner;
 
 public class Main {
 
@@ -23,7 +24,20 @@ public class Main {
         {
             JOptionPane.showMessageDialog(null, name2 + " " + name1);
         }
+
+
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter either 1, 2 or 3: ");
+        int number = input.nextInt();
+
+        switch (number) {
+            case 1 -> JOptionPane.showMessageDialog(null, "You entered 1");
+            case 2 -> JOptionPane.showMessageDialog(null, "You entered 2");
+            case 3 -> JOptionPane.showMessageDialog(null, "You entered 3");
+            default -> JOptionPane.showMessageDialog(null, "You entered neither 1, 2 or 3");
+        }
         System.exit(0);
+
 
     }
 }
